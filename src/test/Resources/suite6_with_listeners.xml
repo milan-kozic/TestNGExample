@@ -1,0 +1,20 @@
+<!DOCTYPE suite SYSTEM "http://beust.com/testng/testng-1.0.dtd" >
+<!-- The set of sanity tests to execute on the system -->
+
+<!--Listeners can be specified in the Suite-->
+<suite name="Suite with Listeners">
+
+    <listeners>
+      <listener class-name="testng.CustomListener" />
+    </listeners>
+
+
+    <test verbose="2" name="Test class without @Listener annotation">
+        <classes>
+<!--            <class name="Example2ABeforeAfterAnnotations" />-->
+            <class name="testng.Example8BListeners" />
+        </classes>
+    </test>
+
+
+</suite>

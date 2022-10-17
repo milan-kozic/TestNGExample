@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "http://beust.com/testng/testng-1.0.dtd" >
+<!-- The set of sanity tests to execute on the system -->
+
+<suite name="Suite with Groups">
+
+    <test verbose="2" name="Execute all Regression Tests except Deprecated tests">
+
+        <groups>
+            <run>
+                <include name="regression"/>
+                <exclude name="deprecated"/>
+            </run>
+        </groups>
+
+        <packages>
+            <package name="testng.*"/>
+        </packages>
+    </test>
+</suite>

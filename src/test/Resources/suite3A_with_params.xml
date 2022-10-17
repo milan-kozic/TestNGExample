@@ -1,0 +1,49 @@
+<!DOCTYPE suite SYSTEM "http://beust.com/testng/testng-1.0.dtd" >
+<!-- The set of sanity tests to execute on the system -->
+
+<suite name="Suite with Parameters">
+
+<!--    These are global parameters. They can be only type of String. They are usually used to provide name of browser, etc. -->
+<!--    They are related to all tests from the suite-->
+    <parameter name="userUsername" value="username" />
+    <parameter name="userPassword" value="qwerty" />
+
+
+    <test verbose="2" name="Test with Global Parameters">
+        <classes>
+            <class name="testng.Example5AParametersAnnotation">
+<!--                    This test will use global credentials-->
+                <methods>
+                    <include name="testCheckCredentials1" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+    <test verbose="2" name="Test with Mixed Parameters">
+        <classes>
+            <class name="testng.Example5AParametersAnnotation">
+<!--                This test will use global username and local password-->
+                <parameter name="userPassword" value="This_is_my_pass_123" />
+                <methods>
+                    <include name="testCheckCredentials1" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test verbose="2" name="Test with Local parameters">
+        <classes>
+            <class name="testng.Example5AParametersAnnotation">
+<!--                 This test will use both local parameters-->
+                <parameter name="userUsername" value="This_is_my_name" />
+                <parameter name="userPassword" value="This_is_my_password" />
+                <methods>
+                    <include name="testCheckCredentials1" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>

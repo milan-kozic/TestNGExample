@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://beust.com/testng/testng-1.0.dtd" >
+<!-- The set of sanity tests to execute on the system -->
+
+<suite name="Simple Suite">
+    <test verbose="2" name="Tests with Examples of Test Annotation">
+        <classes>
+            <class name="testng.Example1ATestAnnotation" />
+        </classes>
+    </test>
+</suite>
