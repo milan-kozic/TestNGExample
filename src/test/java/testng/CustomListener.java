@@ -6,6 +6,7 @@ import org.testng.ITestResult;
 
 public class CustomListener implements ITestListener {
 
+
     private int numberOfPassedTests = 0;
     private int numberOfFailedTests = 0;
     private int numberOfSkippedTests = 0;
@@ -17,6 +18,7 @@ public class CustomListener implements ITestListener {
         System.out.println("\nName of suite: " + context.getSuite().getName());
 
         System.out.println("\n.............................................\n\n");
+
 
     }
 
@@ -86,7 +88,7 @@ public class CustomListener implements ITestListener {
 
         long testRunningTime = testResult.getEndMillis() - testResult.getStartMillis();
 
-        return  "\nTest runnint time: " + testRunningTime + " ms";
+        return  "\nTest running time: " + testRunningTime + " ms";
 
     }
 }
