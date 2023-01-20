@@ -35,4 +35,11 @@ public class Example1BTestPriority {
         System.out.println("\nThis is fourth test!");
 
     }
+
+    @Test( priority = -1 )
+    public void testE(){
+
+        System.out.println("\nThis is fifth test!");
+
+    }
 }
